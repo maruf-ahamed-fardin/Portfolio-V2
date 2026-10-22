@@ -69,7 +69,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable profile" />
       </head>
-      <body>{children}</body>
+      {/* browser extensions (e.g. ColorZilla) add attributes to <body> before React hydrates */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
