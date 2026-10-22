@@ -67,8 +67,9 @@ export function GitHubIcon(props: ComponentProps<'svg'>) {
 export function LinkedInIcon(props: ComponentProps<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
-      <path d="M4 9.5V20M4 4.5v.01M9 20v-6.5a3.5 3.5 0 0 1 7 0V20M9 9.5V20" />
-      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
     </svg>
   );
 }
