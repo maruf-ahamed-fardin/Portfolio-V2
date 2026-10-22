@@ -84,16 +84,16 @@ export default function Hero() {
               and turn designs into real software.
             </p>
             <div className="hero-actions">
-              <Button asChild variant="pill" size="pill" className="group sweep sweep-bright max-md:h-11 max-md:px-[17px] max-md:text-[11px]">
+              <Button asChild variant="pill" size="pill" className="group sweep sweep-bright max-md:h-10 max-md:gap-2 max-md:px-4 max-md:text-[11px]">
                 <a href="#work">
                   <SignalText>Explore my work</SignalText>
                   <ArrowDown strokeWidth={1.5} className="size-[13px] transition-transform duration-300 group-hover:translate-y-[3px]" />
                 </a>
               </Button>
-              <ULink href="#contact" className="text-[11px] whitespace-nowrap">
+              <ULink href="#contact" className="text-[11px] whitespace-nowrap max-md:order-last">
                 <SignalText>Start a conversation</SignalText>
               </ULink>
-              <Button asChild variant="pill" size="pill" className="group sweep sweep-bright max-md:h-11 max-md:px-[17px] max-md:text-[11px]">
+              <Button asChild variant="pill" size="pill" className="group sweep sweep-bright max-md:h-10 max-md:gap-2 max-md:px-4 max-md:text-[11px]">
                 <a href={site.cv} download>
                   <SignalText>Download CV</SignalText>
                   <Download strokeWidth={1.5} className="size-[13px] transition-transform duration-300 group-hover:translate-y-[3px]" />
@@ -102,7 +102,7 @@ export default function Hero() {
             </div>
             <ul
               aria-label="Social profiles"
-              className="mt-1 flex lg:hidden items-center gap-2.5 before:mr-2 before:h-px before:w-7 before:bg-line-2 after:ml-2 after:h-px after:w-7 after:bg-line-2 max-md:gap-2"
+              className="mt-1 flex lg:hidden items-center gap-2.5 before:mr-2 before:h-px before:w-7 before:bg-line-2 after:ml-2 after:h-px after:w-7 after:bg-line-2 max-md:mt-0 max-md:gap-2 max-md:before:w-5 max-md:after:w-5"
             >
               {socials.map((s) => {
                 const Icon = socialIcons[s.key];
@@ -114,7 +114,7 @@ export default function Hero() {
                       rel="noreferrer"
                       aria-label={s.label}
                       title={s.label}
-                      className="grid size-9 place-items-center rounded-full border border-white/20 bg-[#030303]/35 text-[#e3c7a6] backdrop-blur-sm transition-[color,border-color,background,transform] duration-300 ease-expo hover:-translate-y-0.5 hover:border-ember/70 hover:bg-ember/10 hover:text-ember"
+                      className="grid size-9 place-items-center rounded-full max-md:size-8 border border-white/20 bg-[#030303]/35 text-[#e3c7a6] backdrop-blur-sm transition-[color,border-color,background,transform] duration-300 ease-expo hover:-translate-y-0.5 hover:border-ember/70 hover:bg-ember/10 hover:text-ember"
                     >
                       <Icon className="size-[15px]" />
                     </a>
