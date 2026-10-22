@@ -230,8 +230,7 @@ export const journey: Milestone[] = [
   {
     date: 'Jul 2026',
     lead: 'Junior Full Stack Developer.',
-    body: 'Shipping end-to-end: the XCall chat interface, SeloraX EMS and Team Profile—from UI to database.',
-    link: { label: 'Team Profile, live', href: 'https://team-profile-selorax.vercel.app/' },
+    body: 'Designing and building e-commerce website frontends and the SeloraX dashboard, and shipping the XCall chat interface, SeloraX EMS and Team Profile end-to-end—from UI to database.',
   },
 ];
 
