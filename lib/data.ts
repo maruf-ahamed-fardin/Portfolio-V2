@@ -94,7 +94,7 @@ export const featured: Featured[] = [
     kind: 'Product & engineering',
     title: 'SeloraX Employee Management System',
     body: 'Staff records, shift-based attendance, leave, payroll and QR employee cards across four user roles—built end-to-end for the company.',
-    image: '/images/work/ems.jpg',
+    image: '/images/work/ems-dashboard-maruf.jpg',
     domain: 'employee-management-system-nu-azure.vercel.app',
     caption: 'Workforce & HR platform',
     meta: 'Next.js · TypeScript · Prisma',
