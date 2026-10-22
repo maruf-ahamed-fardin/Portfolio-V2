@@ -200,7 +200,6 @@ export default function Work() {
               { label: 'GitHub ↗', href: site.github },
               { label: 'Projects in the wild ↗', href: '#projects' },
               { label: 'Stack & skills ↗', href: '#stack' },
-              { label: 'Download CV ↗', href: site.cv },
             ].map((l) => (
               <a
                 key={l.label}

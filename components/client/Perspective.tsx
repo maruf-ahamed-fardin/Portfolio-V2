@@ -58,26 +58,3 @@ export function PerspectivePanel() {
     </Tabs>
   );
 }
-
-/** Impact section: framed variant with tabs on the left and the visual on the right. */
-export function TravelPanel() {
-  const [value, setValue] = useState(perspectives[1].key);
-  const idx = perspectives.findIndex((p) => p.key === value);
-  return (
-    <Tabs
-      value={value}
-      onValueChange={setValue}
-      className="mt-10 grid gap-8 border border-line-2 px-4 pt-5 pb-7 md:mt-12 md:grid-cols-[1fr_1.1fr] md:px-7 md:pt-7 md:pb-[34px]"
-    >
-      <div className="col-span-full flex justify-between font-mono text-[8px] tracking-[1.2px] text-tan">
-        <span>HOW THE WORK TRAVELS</span>
-        <span>0{idx + 1} / 03</span>
-      </div>
-      <div className="order-last md:order-none">
-        <PerspectiveTabs />
-        <PerspectiveBodies />
-      </div>
-      <SignalField index={idx} variant="impact" className="md:-mt-[30px]" />
-    </Tabs>
-  );
-}

@@ -1,4 +1,3 @@
-import { TravelPanel } from '@/components/client/Perspective';
 import { SectionHead, SplitHead, ULink } from '@/components/primitives';
 import { journey, site } from '@/lib/data';
 
@@ -112,8 +111,6 @@ export default function Impact() {
             ))}
           </ol>
         </div>
-
-        <TravelPanel />
 
         {/* GitHub reach */}
         <div className="mt-12 grid gap-6 border-t border-line pt-9 md:grid-cols-3 md:gap-11">

@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileDown } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ProjectGrid from '@/components/client/ProjectGrid';
 import { GitHubIcon, LinkedInIcon, SectionHead, SplitHead, ULink } from '@/components/primitives';
 import { site } from '@/lib/data';
@@ -77,17 +77,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-
-        <a
-          href={site.cv}
-          target="_blank"
-          rel="noreferrer"
-          className="group mt-14 flex items-center gap-3.5 border-y border-line py-[22px] text-xs text-[#c7b7a2] transition-[color,padding] duration-500 ease-expo hover:pl-2.5 hover:text-ink md:gap-6 md:text-[13px]"
-        >
-          <FileDown strokeWidth={1.3} className="size-5 shrink-0" />
-          Download my CV — experience, skills and projects on one page
-          <ArrowUpRight strokeWidth={1.5} className="ml-auto size-3 shrink-0 transition-transform duration-400 ease-expo group-hover:translate-x-[3px] group-hover:-translate-y-[3px] group-hover:text-ember" />
-        </a>
       </div>
     </section>
   );
