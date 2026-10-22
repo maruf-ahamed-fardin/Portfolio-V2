@@ -13,7 +13,7 @@ export default function Impact() {
       <div className="wrap">
         <SectionHead label="04 / The work, multiplied" aside="People. Products. Possibility." signal />
         <SplitHead
-          className="mt-8 md:mt-10"
+          className="mt-6 md:mt-8"
           title={
             <>
               Growth is a number.
@@ -27,8 +27,8 @@ export default function Impact() {
         </SplitHead>
 
         {/* the big number */}
-        <div className="mt-8 grid items-center gap-5 border-b border-line pb-7 md:mt-10 md:grid-cols-[auto_minmax(0,440px)] md:gap-[clamp(40px,7vw,120px)]">
-          <div className="font-display text-[28vw] leading-[0.88] tracking-[-0.02em] md:text-[clamp(96px,10vw,160px)]" aria-label="8 months">
+        <div className="mt-6 grid items-center gap-5 border-b border-line pb-6 md:mt-8 md:grid-cols-[auto_minmax(0,440px)] md:gap-[clamp(40px,7vw,120px)]">
+          <div className="font-display text-[28vw] leading-[0.88] tracking-[-0.02em] md:text-[clamp(88px,8.5vw,136px)]" aria-label="8 months">
             8
             <sup className="ml-[0.08em] align-[0.4em] text-[0.32em] text-ember">mo</sup>
           </div>
@@ -50,13 +50,13 @@ export default function Impact() {
         </div>
 
         {/* trio */}
-        <div className="grid gap-7 pt-7 md:grid-cols-[1fr_1fr_0.86fr] md:gap-10">
+        <div className="grid gap-6 pt-6 md:grid-cols-[1fr_1fr_0.86fr] md:gap-10">
           {[
             { to: 4, sym: '×', title: 'SeloraX products shipped', body: 'The company dashboard, XCall’s chat interface, SeloraX EMS and Team Profile—frontend to database.' },
             { to: 4, sym: '+', title: 'User roles in one system', body: 'Attendance with shift-based late tracking, leave, payroll and QR employee cards in SeloraX EMS.' },
           ].map((s, i) => (
             <div key={s.title} className="">
-              <strong className={`${statSerif} text-[clamp(56px,5.5vw,80px)]`}>
+              <strong className={`${statSerif} text-[clamp(52px,4.8vw,72px)]`}>
                 {s.to}
                 <span className="text-[0.42em] tracking-normal text-ember">{s.sym}</span>
               </strong>
