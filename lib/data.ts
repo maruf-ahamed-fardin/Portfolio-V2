@@ -47,6 +47,32 @@ export const site = {
   url: 'https://maruf-ahamed-fardin.vercel.app',
 } as const;
 
+/** Search / AI-answer facts. Kept factual and consistent everywhere (metadata, JSON-LD, llms.txt). */
+export const seo = {
+  title: 'Maruf Ahamed Fardin — Full Stack Developer (React, Next.js, AI) in Dhaka',
+  shortTitle: 'Maruf Ahamed Fardin — Full Stack Developer',
+  description:
+    'Maruf Ahamed Fardin is a Full Stack Developer at SeloraX in Dhaka, Bangladesh, building production web apps with React, Next.js, TypeScript, Prisma and PostgreSQL, plus LLM, RAG and AI features.',
+  summary:
+    'Maruf Ahamed Fardin is a Junior Full Stack Developer at SeloraX (Dhaka, Bangladesh) and a Computer Science & Engineering student at Uttara University. He joined SeloraX in November 2025 as a Frontend Developer Apprentice, became a Web Developer Intern in January 2026 and a Junior Full Stack Developer in July 2026. He builds full-stack products with React, Next.js, TypeScript, Tailwind CSS, Node.js, Prisma, Drizzle, PostgreSQL and MySQL, and AI features with the Claude API, RAG and pgvector.',
+  alternateNames: ['Maruf Fardin', 'Maruf Ahamed', 'maruf-ahamed-fardin', 'MAF'],
+  jobTitle: 'Junior Full Stack Developer',
+  employer: { name: 'SeloraX', url: 'https://selorax.io' },
+  education: { name: 'Uttara University', degree: 'BSc in Computer Science & Engineering', start: '2024' },
+  locality: 'Dhaka',
+  country: 'BD',
+  skills: [
+    'React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Express', 'Prisma', 'Drizzle ORM',
+    'PostgreSQL', 'MySQL', 'MongoDB', 'Auth.js', 'Zod', 'REST APIs', 'Claude API', 'Large Language Models', 'RAG', 'pgvector',
+    'Python', 'scikit-learn', 'Progressive Web Apps', 'Figma to code', 'Full Stack Development',
+  ],
+  keywords: [
+    'Maruf Ahamed Fardin', 'Maruf Fardin', 'Maruf Ahamed Fardin portfolio', 'Maruf Ahamed Fardin developer',
+    'Full Stack Developer Dhaka', 'Full Stack Developer Bangladesh', 'Next.js developer Bangladesh', 'React developer Dhaka',
+    'TypeScript developer', 'AI developer Bangladesh', 'LLM RAG developer', 'SeloraX developer', 'Uttara University CSE',
+  ],
+} as const;
+
 export const nav: Link[] = [
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
