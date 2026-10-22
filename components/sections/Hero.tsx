@@ -3,7 +3,8 @@ import HeroCanvas from '@/components/client/HeroCanvas';
 import SignalText from '@/components/client/SignalText';
 import { Button } from '@/components/ui/button';
 import { ULink } from '@/components/primitives';
-import { heroStats, site } from '@/lib/data';
+import { socialIcons } from '@/components/socialIcons';
+import { heroStats, site, socials } from '@/lib/data';
 
 export default function Hero() {
   return (
@@ -63,6 +64,28 @@ export default function Hero() {
                 </a>
               </Button>
             </div>
+            <ul
+              aria-label="Social profiles"
+              className="mt-1 flex items-center gap-2.5 before:mr-2 before:h-px before:w-7 before:bg-line-2 after:ml-2 after:h-px after:w-7 after:bg-line-2 max-md:gap-2"
+            >
+              {socials.map((s) => {
+                const Icon = socialIcons[s.key];
+                return (
+                  <li key={s.key}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={s.label}
+                      title={s.label}
+                      className="grid size-9 place-items-center rounded-full border border-white/20 bg-[#030303]/35 text-[#e3c7a6] backdrop-blur-sm transition-[color,border-color,background,transform] duration-300 ease-expo hover:-translate-y-0.5 hover:border-ember/70 hover:bg-ember/10 hover:text-ember"
+                    >
+                      <Icon className="size-[15px]" />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 
