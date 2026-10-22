@@ -636,7 +636,7 @@ html[data-motion='off'] .sweep::after {
       display: none;
     }
     .hero-kicker {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
     .hero h1 {
       font-size: 17.5vw;
@@ -649,7 +649,8 @@ html[data-motion='off'] .sweep::after {
       margin-left: 0;
     }
     .hero-description {
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 12px;
     }
     .hero-description p {
       max-width: 320px;
