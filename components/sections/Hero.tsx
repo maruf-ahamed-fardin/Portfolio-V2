@@ -30,6 +30,42 @@ export default function Hero() {
           </span>
         </div>
 
+        <nav
+          aria-label="Social profiles"
+          className="absolute top-[150px] right-(--gutter) z-[2] hidden w-[250px] lg:block [@media(max-height:780px)]:top-[135px]"
+        >
+          <span className="caption text-[8px] text-[#c2ae97]">Find me elsewhere</span>
+          <ul className="mt-3 border-b border-line">
+            {socials.map((s) => {
+              const Icon = socialIcons[s.key];
+              return (
+                <li key={s.key} className="border-t border-line">
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group grid grid-cols-[18px_1fr_auto] items-center gap-3.5 py-3 transition-[background] [@media(max-height:780px)]:py-2 duration-350 hover:bg-[linear-gradient(110deg,#ac74400f,#0000_80%)]"
+                  >
+                    <Icon className="size-[15px] text-[#e3c7a6] transition-colors duration-300 group-hover:text-ember" />
+                    <span className="min-w-0">
+                      <span className="block font-display text-[21px] leading-none tracking-[-0.5px] transition-colors duration-300 group-hover:text-[#ffb287]">
+                        {s.label}
+                      </span>
+                      <span className="mt-1 block truncate font-mono text-[7px] tracking-[1px] text-[#9d9387] uppercase [@media(max-height:780px)]:hidden">
+                        {s.handle || s.note}
+                      </span>
+                    </span>
+                    <ArrowUpRight
+                      strokeWidth={1.5}
+                      className="size-3 text-[#bfb2a3] transition-[transform,color] duration-400 ease-expo group-hover:translate-x-[3px] group-hover:-translate-y-[3px] group-hover:text-ember"
+                    />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
         <div className="hero-content">
           <span className="hero-kicker">
             <SignalText>A DEVELOPER’S PERSPECTIVE ON PRODUCT</SignalText>
@@ -66,7 +102,7 @@ export default function Hero() {
             </div>
             <ul
               aria-label="Social profiles"
-              className="mt-1 flex items-center gap-2.5 before:mr-2 before:h-px before:w-7 before:bg-line-2 after:ml-2 after:h-px after:w-7 after:bg-line-2 max-md:gap-2"
+              className="mt-1 flex lg:hidden items-center gap-2.5 before:mr-2 before:h-px before:w-7 before:bg-line-2 after:ml-2 after:h-px after:w-7 after:bg-line-2 max-md:gap-2"
             >
               {socials.map((s) => {
                 const Icon = socialIcons[s.key];
