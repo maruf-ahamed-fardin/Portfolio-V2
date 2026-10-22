@@ -2,13 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type Lenis from 'lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motionConfig, narrative } from '@/lib/narrative';
 
 declare global {
   interface Window {
     __lenis?: Lenis | null;
+    __st?: { update: () => void };
   }
 }
 
@@ -43,10 +42,17 @@ export default function MotionSystem() {
     if (on === null) return;
     document.documentElement.dataset.motion = on ? 'on' : 'off';
     window.dispatchEvent(new CustomEvent('motionchange', { detail: on }));
-    gsap.registerPlugin(ScrollTrigger);
     narrative.hero = 0;
+    let cancelled = false;
+    let ctx: { revert: () => void } | null = null;
 
-    const ctx = gsap.context(() => {
+    // GSAP is loaded after first paint so it never delays the hero
+    (async () => {
+      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([import('gsap'), import('gsap/ScrollTrigger')]);
+      if (cancelled) return;
+      gsap.registerPlugin(ScrollTrigger);
+      window.__st = ScrollTrigger;
+      ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: '.hero',
         start: 'top top',
@@ -66,16 +72,6 @@ export default function MotionSystem() {
       });
       if (!on) return;
 
-      gsap.fromTo(
-        '.hero .reveal-line',
-        { yPercent: 105, filter: 'blur(5px)' },
-        { yPercent: 0, filter: 'blur(0px)', duration: 1.25, stagger: 0.12, ease: 'power4.out', clearProps: 'transform,filter' }
-      );
-      gsap.fromTo(
-        '.hero-description > p',
-        { filter: 'blur(3px)', y: 8 },
-        { filter: 'blur(0px)', y: 0, duration: 0.75, delay: 0.15, ease: 'power2.out', clearProps: 'filter,transform' }
-      );
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) =>
         gsap.fromTo(
           el,
@@ -96,8 +92,9 @@ export default function MotionSystem() {
         ease: 'none',
         scrollTrigger: { trigger: '.hero', start: '25% top', end: 'bottom top', scrub: 1 },
       });
-    });
-    document.documentElement.classList.add('motion-ready');
+      });
+      document.documentElement.classList.add('motion-ready');
+    })();
 
     const onPointer = (e: PointerEvent) => {
       narrative.pointerX = e.clientX / innerWidth - 0.5;
@@ -105,7 +102,8 @@ export default function MotionSystem() {
     };
     addEventListener('pointermove', onPointer, { passive: true });
     return () => {
-      ctx.revert();
+      cancelled = true;
+      ctx?.revert();
       removeEventListener('pointermove', onPointer);
     };
   }, [on]);
@@ -124,7 +122,7 @@ export default function MotionSystem() {
       const { default: L } = await import('lenis');
       if (cancelled) return;
       lenis = new L({ autoRaf: true, lerp: 0.13, smoothWheel: true, syncTouch: false, anchors: false });
-      lenis.on('scroll', ScrollTrigger.update);
+      lenis.on('scroll', () => window.__st?.update());
       window.__lenis = lenis;
     };
     start();

@@ -187,13 +187,24 @@ html.lenis body {
 
 /* ---------- motion (ported from the reference) ---------- */
 /* pre-paint states so GSAP's from-values never flash; removed once timelines exist */
-html[data-motion='on']:not(.motion-ready) .hero .reveal-line {
-  transform: translateY(105%);
-  filter: blur(5px);
+/* hero intro runs in CSS so it starts on first paint instead of waiting for JS (same values as the GSAP version) */
+@keyframes hero-line-in {
+  from {
+    transform: translateY(105%);
+    filter: blur(5px);
+  }
 }
-html[data-motion='on']:not(.motion-ready) .hero-description > p {
-  transform: translateY(8px);
-  filter: blur(3px);
+@keyframes hero-desc-in {
+  from {
+    transform: translateY(8px);
+    filter: blur(3px);
+  }
+}
+html[data-motion='on'] .hero .reveal-line {
+  animation: hero-line-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+html[data-motion='on'] .hero-description > p {
+  animation: hero-desc-in 0.7s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 html[data-motion='on']:not(.motion-ready) [data-reveal] {
   transform: translateY(35px);
@@ -776,12 +787,6 @@ html[data-motion='off'] .sweep::after {
   opacity: var(--so, 0);
   background: radial-gradient(circle 260px at var(--sx, 70%) var(--sy, 40%), rgba(255, 140, 89, 0.14), transparent 70%);
   mix-blend-mode: screen;
-}
-html[data-motion='on']:not(.motion-ready) [data-stage-media] {
-  clip-path: inset(0 100% 0 0);
-}
-html[data-motion='on']:not(.motion-ready) [data-stage-line] {
-  transform: translateY(105%);
 }
 /* soft left edge so the portrait melts into the dark panel instead of a hard seam */
 @media (min-width: 701px) {
