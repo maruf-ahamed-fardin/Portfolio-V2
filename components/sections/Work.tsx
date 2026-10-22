@@ -77,6 +77,7 @@ export default function Work() {
       <div className="wrap">
         <SectionHead label="02 / Selected work" aside="Built. Shipped. Put into the world." signal />
         <SplitHead
+          className="mt-8 md:mt-10"
           title={
             <>
               Ideas are a start.
@@ -90,7 +91,7 @@ export default function Work() {
           <br />A few things I’ve helped bring to life.
         </SplitHead>
 
-        <div className="mt-10 border-t border-line md:mt-[74px]">
+        <div className="mt-8 border-t border-line md:mt-12">
           {/* 01 — large feature */}
           <div className="grid items-center gap-[30px] border-b border-line pt-7 pb-[46px] md:gap-10 md:pt-[74px] md:grid-cols-[1.2fr_1fr] md:gap-[clamp(30px,5.4vw,78px)] md:pb-[50px]">
             <div className="">
