@@ -74,7 +74,6 @@ export default function SignalField({ index, variant, className }: { index: numb
   useEffect(() => {
     const el = host.current!;
     const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-    const small = matchMedia('(max-width: 700px)');
     let teardown: (() => void) | null = null;
     let visible = false;
     let failed = false;
@@ -117,7 +116,7 @@ export default function SignalField({ index, variant, className }: { index: numb
       const U = (n: string) => gl.getUniformLocation(prog, n);
       const u = { w: U('uWeights'), t: U('uTime'), pulse: U('uPulse'), rot: U('uRot'), cam: U('uCamZ'), ptr: U('uPointer'), proj: U('uProj') };
       // camera closer than the reference so the cloud fills more of its box
-      gl.uniform1f(u.cam, variant === 'impact' ? 4.5 : 4.4);
+      gl.uniform1f(u.cam, variant === 'impact' ? 4.5 : 4.9);
 
       const weights = [0, 0, 0];
       weights[target.current] = 1;
@@ -194,7 +193,8 @@ export default function SignalField({ index, variant, className }: { index: numb
     };
 
     const update = () => {
-      const allowed = !reduce.matches && !small.matches && document.documentElement.dataset.motion !== 'off' && !failed;
+      // runs on every screen size (incl. phones); only motion-off / reduced-motion / no-WebGL fall back to the static outline
+      const allowed = !reduce.matches && document.documentElement.dataset.motion !== 'off' && !failed;
       if (!allowed) return teardown?.();
       if (!visible) return;
       if (!teardown) start();
@@ -208,12 +208,10 @@ export default function SignalField({ index, variant, className }: { index: numb
     const mo = new MutationObserver(update);
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-motion'] });
     reduce.addEventListener('change', update);
-    small.addEventListener('change', update);
     return () => {
       io.disconnect();
       mo.disconnect();
       reduce.removeEventListener('change', update);
-      small.removeEventListener('change', update);
       teardown?.();
     };
   }, [variant]);
