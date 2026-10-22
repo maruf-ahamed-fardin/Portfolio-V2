@@ -13,7 +13,7 @@ export default function Impact() {
       <div className="wrap">
         <SectionHead label="04 / The work, multiplied" aside="People. Products. Possibility." signal />
         <SplitHead
-          className="mt-6 md:mt-8"
+          className="mt-6 md:mt-8 [&_h2]:text-[clamp(34px,4.2vw,68px)]"
           title={
             <>
               Growth is a number.
@@ -27,13 +27,13 @@ export default function Impact() {
         </SplitHead>
 
         {/* the big number */}
-        <div className="mt-6 grid items-center gap-5 border-b border-line pb-6 md:mt-8 md:grid-cols-[auto_minmax(0,440px)] md:gap-[clamp(40px,7vw,120px)]">
-          <div className="font-display text-[28vw] leading-[0.88] tracking-[-0.02em] md:text-[clamp(88px,8.5vw,136px)]" aria-label="8 months">
+        <div className="mt-6 grid items-center gap-5 border-b border-line pb-6 md:mt-8 md:grid-cols-[auto_minmax(0,420px)] md:justify-start md:gap-[clamp(40px,6vw,96px)]">
+          <div className="font-display text-[28vw] leading-[0.88] tracking-[-0.02em] md:text-[clamp(80px,7.5vw,120px)]" aria-label="8 months">
             8
             <sup className="ml-[0.08em] align-[0.4em] text-[0.32em] text-ember">mo</sup>
           </div>
           <div className="">
-            <h3 className="font-display text-[28px] leading-[1.15] font-normal tracking-[-0.5px] md:text-[clamp(24px,2.4vw,34px)]">
+            <h3 className="font-display text-[24px] leading-[1.15] font-normal tracking-[-0.5px] md:text-[clamp(22px,2vw,28px)]">
               From apprentice.
               <br />
               To full stack.
@@ -56,7 +56,7 @@ export default function Impact() {
             { to: 4, sym: '+', title: 'User roles in one system', body: 'Attendance with shift-based late tracking, leave, payroll and QR employee cards in SeloraX EMS.' },
           ].map((s, i) => (
             <div key={s.title} className="">
-              <strong className={`${statSerif} text-[clamp(52px,4.8vw,72px)]`}>
+              <strong className={`${statSerif} text-[clamp(44px,4vw,60px)]`}>
                 {s.to}
                 <span className="text-[0.42em] tracking-normal text-ember">{s.sym}</span>
               </strong>
@@ -66,7 +66,7 @@ export default function Impact() {
           ))}
           <div className="border-t border-line pt-7 md:border-t-0 md:border-l md:pt-2 md:pb-2 md:pl-10">
             <span className="caption text-[8px] text-[#c0a88c]">The common thread</span>
-            <p className="mt-3.5 font-display text-[24px] leading-[1.35] text-[#e9e0d5] md:text-[clamp(20px,2vw,28px)]">
+            <p className="mt-3.5 font-display text-[21px] leading-[1.35] text-[#e9e0d5] md:text-[clamp(18px,1.7vw,24px)]">
               Build something useful.
               <br />
               Make it reliable.
@@ -80,7 +80,7 @@ export default function Impact() {
         <div id="journey-story" className="mt-8 grid gap-9 border-t border-line pt-8 md:mt-10 md:grid-cols-[1.45fr_1fr] md:gap-[clamp(40px,5.5vw,80px)] md:pt-10">
           <div className="">
             <span className="caption text-[#c4a88b]">SeloraX / Part of the building story</span>
-            <h3 className="mt-5 font-display text-[clamp(38px,4.2vw,68px)] leading-[1.06] font-normal tracking-[-0.035em]">
+            <h3 className="mt-5 font-display text-[clamp(32px,3.4vw,52px)] leading-[1.06] font-normal tracking-[-0.035em]">
               From an apprentice.
               <em className="block">To the full stack.</em>
             </h3>
