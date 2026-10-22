@@ -45,10 +45,10 @@ export default function Contact() {
               <ArrowUp strokeWidth={1.5} className="size-[13px]" />
             </a>
           </div>
-          <div className="grid grid-cols-2 pt-[22px] pb-20 font-mono text-[7px] tracking-[0.6px] text-[#929292] uppercase md:grid-cols-[1fr_auto_1fr] md:pb-[30px] md:text-[6px]">
+          <div className="grid gap-1.5 pt-[22px] pb-7 font-mono text-[7px] tracking-[0.6px] text-[#929292] uppercase md:grid-cols-[1fr_auto_1fr] md:pb-[30px] md:text-[6px]">
             <span>© 2026 Maruf Ahamed Fardin</span>
             <span className="hidden md:block">Built with intent. Always evolving.</span>
-            <span className="justify-self-end md:mr-[124px]">Dhaka, Bangladesh ↗ The world</span>
+            <span className="md:mr-[124px] md:justify-self-end">Dhaka, Bangladesh ↗ The world</span>
           </div>
         </footer>
       </div>

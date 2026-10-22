@@ -12,10 +12,10 @@ export default function Disciplines({ intro }: { intro: React.ReactNode }) {
   const current = disciplines.find((d) => d.no === open) ?? disciplines[0];
 
   return (
-    <div className="mt-[50px] grid gap-[60px] md:mt-[86px] md:grid-cols-[1.1fr_1fr] md:gap-[clamp(30px,4.2vw,60px)]">
+    <div className="mt-8 grid gap-10 md:mt-[86px] md:grid-cols-[1.1fr_1fr] md:gap-[clamp(30px,4.2vw,60px)]">
       <div>
         {intro}
-        <div data-reveal className="mt-[46px] max-w-[430px] border-t border-line pt-10">
+        <div data-reveal className="mt-8 max-w-[430px] border-t border-line pt-8 md:mt-[46px] md:pt-10">
           <span className="caption text-[10px] text-[#cda882]">
             <SignalText key={current.kind}>{current.kind.toUpperCase()}</SignalText>
           </span>
@@ -63,7 +63,7 @@ export default function Disciplines({ intro }: { intro: React.ReactNode }) {
                 </span>
               </span>
             </AccordionTrigger>
-            <AccordionContent className="pt-1 pb-14 md:pr-10">
+            <AccordionContent className="pt-1 pb-10 md:pr-10 md:pb-14">
               <p className="text-[13px] leading-[1.75] text-mute">{d.body}</p>
               <p className="mt-5 border-l-2 border-ember pl-[18px] text-[13px] leading-[1.9] text-[#d2d2d2]">{d.stack}</p>
               <ULink href="#projects" small tone="warm" icon={false} className="mt-[22px]">

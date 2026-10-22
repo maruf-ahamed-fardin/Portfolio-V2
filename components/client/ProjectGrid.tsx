@@ -36,7 +36,7 @@ export default function ProjectGrid() {
         <span className="caption mt-2.5 w-full text-[#b8a68f] md:mt-0 md:ml-auto md:w-auto">0{shown.length} SELECTED BUILDS</span>
       </div>
 
-      <div className="mt-9 grid gap-[50px] md:grid-cols-2 md:gap-x-[25px] md:gap-y-[70px] lg:grid-cols-3">
+      <div className="mt-7 grid gap-10 md:grid-cols-2 md:gap-x-[25px] md:gap-y-[70px] lg:grid-cols-3">
         {shown.map((p) => (
           <article key={p.title} data-reveal className="group card-interfere">
             <a
@@ -62,7 +62,7 @@ export default function ProjectGrid() {
                 {p.chip}
               </span>
             </a>
-            <p className="mt-[25px] font-mono text-[8px] tracking-[0.6px] text-[#bdab97]">{p.meta}</p>
+            <p className="mt-4 font-mono text-[8px] tracking-[0.6px] text-[#bdab97] md:mt-[25px]">{p.meta}</p>
             <h3 className="card-title mt-3 font-display text-[clamp(30px,2.6vw,38px)] leading-[1.15] font-normal tracking-[-0.3px]">{p.title}</h3>
             <p className="mt-2 text-xs leading-[1.75] text-[#b9afa3]">{p.body}</p>
             <div className="mt-3.5 flex gap-[22px]">

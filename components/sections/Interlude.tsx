@@ -8,7 +8,7 @@ export default function Interlude() {
       <div className="wrap">
         <SectionHead label="Interlude / Still becoming" aside="A journey in motion" />
 
-        <div className="mt-[50px] grid gap-[60px] md:mt-[86px] md:grid-cols-[1.1fr_1fr]">
+        <div className="mt-8 grid gap-10 md:mt-[86px] md:grid-cols-[1.1fr_1fr] md:gap-[60px]">
           <h2 className="display interfere self-start md:sticky md:top-[140px]" data-reveal>
             Started with code.
             <em>Kept asking why.</em>
@@ -19,7 +19,7 @@ export default function Interlude() {
                 <li
                   data-reveal
                   key={s.date}
-                  className="relative pb-[50px] before:absolute before:top-px before:-left-[33px] before:size-[7px] before:rounded-full before:bg-[#cfcfcf] md:before:-left-10"
+                  className="relative pb-9 md:pb-[50px] before:absolute before:top-px before:-left-[33px] before:size-[7px] before:rounded-full before:bg-[#cfcfcf] md:before:-left-10"
                 >
                   <span className="font-mono text-[8px] tracking-[1.2px] text-[#bfbfbf] uppercase">{s.date}</span>
                   <h3 className="mt-[13px] text-[19px] font-[450] tracking-[-0.5px]">{s.title}</h3>

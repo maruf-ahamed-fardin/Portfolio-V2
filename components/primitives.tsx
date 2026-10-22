@@ -49,7 +49,7 @@ export function ULink({ small, tone = 'ink', icon = true, className, children, .
 /** Two-column header: big serif display on the left, a short lede on the right. */
 export function SplitHead({ title, children, className }: { title: ReactNode; children?: ReactNode; className?: string }) {
   return (
-    <div data-reveal className={cn('mt-14 flex flex-col items-start gap-6 md:mt-[100px] md:flex-row md:items-end md:justify-between md:gap-10', className)}>
+    <div data-reveal className={cn('mt-8 flex flex-col items-start gap-5 md:mt-[100px] md:flex-row md:items-end md:justify-between md:gap-10', className)}>
       <h2 className="display interfere">{title}</h2>
       {children && <div className="max-w-[300px] pb-1.5 text-[15px] leading-[1.8] text-soft">{children}</div>}
     </div>

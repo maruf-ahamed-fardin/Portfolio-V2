@@ -196,7 +196,7 @@ export default function Work() {
             </a>
           </div>
 
-          <div data-reveal className="mt-10 flex flex-wrap gap-x-[30px] gap-y-3.5 md:mt-14">
+          <div data-reveal className="mt-10 flex flex-nowrap justify-between gap-x-3 sm:justify-start sm:gap-x-[30px] md:mt-14">
             {[
               { label: 'GitHub ↗', href: site.github },
               { label: 'Projects in the wild ↗', href: '#projects' },
@@ -206,7 +206,7 @@ export default function Work() {
                 key={l.label}
                 href={l.href}
                 {...(l.href.startsWith('#') ? {} : { target: '_blank', rel: 'noreferrer' })}
-                className="border-b border-ink/40 pb-2 text-[13px] transition-colors hover:border-ember hover:text-[#f6dcc6]"
+                className="border-b border-ink/40 pb-2 text-[12px] whitespace-nowrap transition-colors sm:text-[13px] hover:border-ember hover:text-[#f6dcc6]"
               >
                 {l.label}
               </a>

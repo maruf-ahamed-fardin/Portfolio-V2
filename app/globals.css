@@ -690,16 +690,24 @@ html[data-motion='off'] .contact-beam {
       justify-content: center;
       gap: 14px 10px;
     }
+    /* bottom padding keeps the row above the fixed motion button */
     .hero-bottom {
       padding-top: 36px;
-      padding-bottom: 28px;
+      padding-bottom: 64px;
     }
     .hero-bottom > a:first-child {
       gap: 9px;
     }
     .hero-bottom > span {
-      max-width: 110px;
+      white-space: nowrap;
+      letter-spacing: 0.4px;
       text-align: right;
+    }
+    .hero-content {
+      text-shadow: 0 2px 18px rgb(0 0 0 / 0.75);
+    }
+    .hero-kicker {
+      text-shadow: 0 1px 8px rgb(0 0 0 / 0.95);
     }
   }
 }

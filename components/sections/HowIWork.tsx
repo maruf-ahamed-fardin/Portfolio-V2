@@ -13,7 +13,7 @@ export default function HowIWork() {
                 How I work.
                 <em>From idea to impact.</em>
               </h2>
-              <p className="mt-[30px] text-[13px] text-mute">Choose a discipline. Follow the thinking.</p>
+              <p className="mt-5 text-[13px] text-mute md:mt-[30px]">Choose a discipline. Follow the thinking.</p>
             </>
           }
         />

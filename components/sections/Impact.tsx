@@ -49,7 +49,7 @@ export default function Impact() {
         </div>
 
         {/* trio */}
-        <div className="grid gap-6 pt-6 md:grid-cols-[1fr_1fr_0.86fr] md:gap-10">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-6 pt-6 md:grid-cols-[1fr_1fr_0.86fr] md:gap-10">
           {[
             { to: 4, sym: '×', title: 'SeloraX products shipped', body: 'The company dashboard, XCall’s chat interface, SeloraX EMS and Team Profile—frontend to database.' },
             { to: 4, sym: '+', title: 'User roles in one system', body: 'Attendance with shift-based late tracking, leave, payroll and QR employee cards in SeloraX EMS.' },
@@ -59,11 +59,11 @@ export default function Impact() {
                 {s.to}
                 <span className="text-[0.42em] tracking-normal text-ember">{s.sym}</span>
               </strong>
-              <h4 className="mt-3 text-[15px] font-medium">{s.title}</h4>
-              <p className="mt-2 max-w-[320px] text-[13px] leading-[1.75] text-[#bfb4a6]">{s.body}</p>
+              <h4 className="mt-3 text-sm font-medium md:text-[15px]">{s.title}</h4>
+              <p className="mt-2 max-w-[320px] text-xs leading-[1.7] text-[#bfb4a6] md:text-[13px] md:leading-[1.75]">{s.body}</p>
             </div>
           ))}
-          <div data-reveal className="border-t border-line pt-7 md:border-t-0 md:border-l md:pt-2 md:pb-2 md:pl-10">
+          <div data-reveal className="col-span-2 border-t border-line pt-7 text-center md:col-span-1 md:border-t-0 md:text-left md:border-l md:pt-2 md:pb-2 md:pl-10">
             <span className="caption text-[8px] text-[#c0a88c]">The common thread</span>
             <p className="mt-3.5 font-display text-[21px] leading-[1.35] text-[#e9e0d5] md:text-[clamp(18px,1.7vw,24px)]">
               Build something useful.
@@ -114,8 +114,8 @@ export default function Impact() {
         </div>
 
         {/* GitHub reach */}
-        <div className="mt-12 grid gap-6 border-t border-line pt-9 md:grid-cols-3 md:gap-11">
-          <div className="">
+        <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-6 border-t border-line pt-9 md:grid-cols-3 md:gap-11">
+          <div className="col-span-2 md:col-span-1">
             <span className="caption leading-[2.3] text-[#c3aa91]">
               An open codebase.
               <br />A lasting habit.
@@ -131,7 +131,7 @@ export default function Impact() {
             { to: 60, label: 'Stars across my projects' },
           ].map((s, i) => (
             <div key={s.label} data-reveal>
-              <strong className={`${statSerif} text-[clamp(64px,6.5vw,94px)] tracking-[-0.04em]`}>
+              <strong className={`${statSerif} text-[clamp(56px,6.5vw,94px)] tracking-[-0.04em]`}>
                 {s.to}
                 <span className="text-[0.5em] tracking-normal text-[#c79a6f] italic">+</span>
               </strong>
