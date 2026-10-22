@@ -9,6 +9,7 @@ import Projects from '@/components/sections/Projects';
 import Stage from '@/components/sections/Stage';
 import Interlude from '@/components/sections/Interlude';
 import Contact from '@/components/sections/Contact';
+import JsonLd from '@/components/JsonLd';
 
 // Rendered on the server for every request (SSR); only small interactive islands hydrate on the client.
 export const dynamic = 'force-dynamic';
@@ -22,6 +23,7 @@ export default function Home() {
       >
         Skip to content
       </a>
+      <JsonLd />
       <Nav />
       <main id="main">
         <Hero />
