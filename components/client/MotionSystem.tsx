@@ -75,13 +75,13 @@ export default function MotionSystem() {
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) =>
         gsap.fromTo(
           el,
-          { y: 35 },
+          { y: 28, opacity: 0 },
           {
             y: 0,
             opacity: 1,
             duration: motionConfig.revealDuration,
             ease: motionConfig.ease,
-            scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+            scrollTrigger: { trigger: el, start: 'top 90%', once: true },
             clearProps: 'transform,opacity',
           }
         )

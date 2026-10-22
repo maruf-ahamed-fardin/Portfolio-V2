@@ -38,7 +38,7 @@ export default function ProjectGrid() {
 
       <div className="mt-9 grid gap-[50px] md:grid-cols-2 md:gap-x-[25px] md:gap-y-[70px] lg:grid-cols-3">
         {shown.map((p) => (
-          <article key={p.title} className="group card-interfere">
+          <article key={p.title} data-reveal className="group card-interfere">
             <a
               href={p.live}
               target="_blank"

@@ -94,21 +94,21 @@ export default function Work() {
         <div className="mt-5 border-t border-line md:mt-7">
           {/* 01 — large feature */}
           <div className="grid items-center gap-[30px] border-b border-line pt-6 pb-8 md:pt-8 md:grid-cols-[1.15fr_1fr] md:gap-[clamp(30px,5vw,72px)] md:pb-10">
-            <div className="">
+            <div data-reveal>
               <Browser item={a} />
             </div>
-            <div className="">
+            <div data-reveal>
               <FeatText item={a} />
             </div>
           </div>
 
           {/* 02 + 03 — side by side */}
           <div className="grid gap-10 border-b border-line pt-8 pb-10 md:pt-10 md:grid-cols-2 md:gap-[clamp(24px,3.75vw,54px)] md:pb-12">
-            <div className="md:pl-[7px]">
+            <div data-reveal className="md:pl-[7px]">
               <Browser item={b} />
               <FeatText item={b} className="mt-5 md:mt-6 md:grid-cols-[47px_1fr]" />
             </div>
-            <div className="">
+            <div data-reveal>
               <a
                 href={c.href}
                 target="_blank"
@@ -147,6 +147,7 @@ export default function Work() {
                   href={w.href}
                   target="_blank"
                   rel="noreferrer"
+                  data-reveal
                   className="group mb-4 flex items-start justify-between border-b border-line pb-4 md:mb-5 md:pb-5"
                 >
                   <div>
@@ -195,7 +196,7 @@ export default function Work() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-x-[30px] gap-y-3.5 md:mt-14">
+          <div data-reveal className="mt-10 flex flex-wrap gap-x-[30px] gap-y-3.5 md:mt-14">
             {[
               { label: 'GitHub ↗', href: site.github },
               { label: 'Projects in the wild ↗', href: '#projects' },

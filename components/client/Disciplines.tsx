@@ -15,7 +15,7 @@ export default function Disciplines({ intro }: { intro: React.ReactNode }) {
     <div className="mt-[50px] grid gap-[60px] md:mt-[86px] md:grid-cols-[1.1fr_1fr] md:gap-[clamp(30px,4.2vw,60px)]">
       <div>
         {intro}
-        <div className="mt-[46px] max-w-[430px] border-t border-line pt-10">
+        <div data-reveal className="mt-[46px] max-w-[430px] border-t border-line pt-10">
           <span className="caption text-[10px] text-[#cda882]">
             <SignalText key={current.kind}>{current.kind.toUpperCase()}</SignalText>
           </span>

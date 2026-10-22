@@ -26,7 +26,7 @@ export default function Impact() {
         </SplitHead>
 
         {/* the big number */}
-        <div className="mt-6 grid items-center gap-5 border-b border-line pb-6 md:mt-8 md:grid-cols-[auto_minmax(0,420px)] md:justify-start md:gap-[clamp(40px,6vw,96px)]">
+        <div data-reveal className="mt-6 grid items-center gap-5 border-b border-line pb-6 md:mt-8 md:grid-cols-[auto_minmax(0,420px)] md:justify-start md:gap-[clamp(40px,6vw,96px)]">
           <div className="font-display text-[28vw] leading-[0.88] tracking-[-0.02em] md:text-[clamp(80px,7.5vw,120px)]" aria-label="8 months">
             8
             <sup className="ml-[0.08em] align-[0.4em] text-[0.32em] text-ember">mo</sup>
@@ -54,7 +54,7 @@ export default function Impact() {
             { to: 4, sym: '×', title: 'SeloraX products shipped', body: 'The company dashboard, XCall’s chat interface, SeloraX EMS and Team Profile—frontend to database.' },
             { to: 4, sym: '+', title: 'User roles in one system', body: 'Attendance with shift-based late tracking, leave, payroll and QR employee cards in SeloraX EMS.' },
           ].map((s, i) => (
-            <div key={s.title} className="">
+            <div key={s.title} data-reveal>
               <strong className={`${statSerif} text-[clamp(44px,4vw,60px)]`}>
                 {s.to}
                 <span className="text-[0.42em] tracking-normal text-ember">{s.sym}</span>
@@ -63,7 +63,7 @@ export default function Impact() {
               <p className="mt-2 max-w-[320px] text-[13px] leading-[1.75] text-[#bfb4a6]">{s.body}</p>
             </div>
           ))}
-          <div className="border-t border-line pt-7 md:border-t-0 md:border-l md:pt-2 md:pb-2 md:pl-10">
+          <div data-reveal className="border-t border-line pt-7 md:border-t-0 md:border-l md:pt-2 md:pb-2 md:pl-10">
             <span className="caption text-[8px] text-[#c0a88c]">The common thread</span>
             <p className="mt-3.5 font-display text-[21px] leading-[1.35] text-[#e9e0d5] md:text-[clamp(18px,1.7vw,24px)]">
               Build something useful.
@@ -77,7 +77,7 @@ export default function Impact() {
 
         {/* SeloraX story + timeline */}
         <div id="journey-story" className="mt-8 grid gap-9 border-t border-line pt-8 md:mt-10 md:grid-cols-[1.45fr_1fr] md:gap-[clamp(40px,5.5vw,80px)] md:pt-10">
-          <div className="">
+          <div data-reveal>
             <span className="caption text-[#c4a88b]">SeloraX / Part of the building story</span>
             <h3 className="mt-5 font-display text-[clamp(32px,3.4vw,52px)] leading-[1.06] font-normal tracking-[-0.035em]">
               From an apprentice.
@@ -96,6 +96,7 @@ export default function Impact() {
             {journey.map((j) => (
               <li
                 key={j.date}
+                data-reveal
                 className="relative pb-7 before:absolute before:top-0.5 before:-left-[29px] before:size-[7px] before:border before:border-ember before:bg-bg"
               >
                 <span className="font-mono text-[10px] text-[#dcab84]">{j.date}</span>
@@ -129,7 +130,7 @@ export default function Impact() {
             { to: 24, label: 'Public GitHub repositories' },
             { to: 60, label: 'Stars across my projects' },
           ].map((s, i) => (
-            <div key={s.label} className="">
+            <div key={s.label} data-reveal>
               <strong className={`${statSerif} text-[clamp(64px,6.5vw,94px)] tracking-[-0.04em]`}>
                 {s.to}
                 <span className="text-[0.5em] tracking-normal text-[#c79a6f] italic">+</span>

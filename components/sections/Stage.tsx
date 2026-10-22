@@ -60,7 +60,7 @@ export default function Stage() {
           </span>
         </StageReveal>
 
-        <div className="mt-14 grid gap-[60px] md:grid-cols-[1.1fr_1fr]">
+        <div data-reveal className="mt-14 grid gap-[60px] md:grid-cols-[1.1fr_1fr]">
           <div className="">
             <h3 className="text-[23px] leading-[1.25] font-[450] tracking-[-0.8px] md:text-[27px]">
               Building what I learn.
