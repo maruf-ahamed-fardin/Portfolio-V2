@@ -12,14 +12,14 @@ export default function About() {
             <PerspectivePanel />
           </div>
 
-          <div className="self-center md:pt-[clamp(24px,5vw,72px)]" data-reveal>
+          <div className="self-center" data-reveal>
             <h2 className="interfere font-display text-4xl leading-[1.03] tracking-[-1.4px] md:text-[clamp(36px,3.8vw,64px)] md:tracking-[-2px]">
               Code is
               <br />
               the starting point.
               <em className="block">Products are the point.</em>
             </h2>
-            <p className="mt-[30px] text-[15px] leading-[1.75] text-[#d6d6d6] md:text-[17px]">
+            <p className="mt-5 text-[15px] leading-[1.75] text-[#d6d6d6] md:text-[17px]">
               I connect interfaces, data, and intelligence.
             </p>
             <p className="mt-5 max-w-[470px] text-sm leading-[1.75] text-mute">
@@ -28,10 +28,10 @@ export default function About() {
                 the interface, the database, and the AI behind it.
               </strong>
             </p>
-            <ULink href="#journey" className="mt-[26px]">
+            <ULink href="#journey" className="mt-5">
               Read my story
             </ULink>
-            <div className="mt-[46px] flex flex-wrap gap-3.5 font-mono text-[7px] tracking-[1.2px] text-[#969696]">
+            <div className="mt-8 flex flex-wrap gap-3.5 font-mono text-[7px] tracking-[1.2px] text-[#969696]">
               <span>FRONTEND MIND.</span>
               <span>BACKEND DISCIPLINE.</span>
               <span>AI CURIOSITY.</span>

@@ -19,7 +19,7 @@ export default function ProjectGrid() {
 
   return (
     <>
-      <div className="mt-11 flex flex-wrap items-center gap-2 border-b border-line pb-6 md:mt-[70px] md:flex-nowrap">
+      <div className="mt-7 flex flex-wrap items-center gap-2 border-b border-line pb-5 md:mt-8 md:flex-nowrap">
         {FILTERS.map((f) => (
           <button
             key={f.key}

@@ -73,11 +73,11 @@ function FeatText({ item, className }: { item: Featured; className?: string }) {
 export default function Work() {
   const [a, b, c] = featured;
   return (
-    <section id="work" className="relative pt-[50px] md:pt-[100px]">
+    <section id="work" className="relative pt-[44px] md:pt-[72px]">
       <div className="wrap">
         <SectionHead label="02 / Selected work" aside="Built. Shipped. Put into the world." signal />
         <SplitHead
-          className="mt-8 md:mt-10"
+          className="mt-6 md:mt-7 [&_h2]:text-[clamp(34px,4.4vw,72px)]"
           title={
             <>
               Ideas are a start.
@@ -91,9 +91,9 @@ export default function Work() {
           <br />A few things I’ve helped bring to life.
         </SplitHead>
 
-        <div className="mt-6 border-t border-line md:mt-10">
+        <div className="mt-5 border-t border-line md:mt-7">
           {/* 01 — large feature */}
-          <div className="grid items-center gap-[30px] border-b border-line pt-6 pb-8 md:pt-10 md:grid-cols-[1.15fr_1fr] md:gap-[clamp(30px,5vw,72px)] md:pb-10">
+          <div className="grid items-center gap-[30px] border-b border-line pt-6 pb-8 md:pt-8 md:grid-cols-[1.15fr_1fr] md:gap-[clamp(30px,5vw,72px)] md:pb-10">
             <div className="">
               <Browser item={a} />
             </div>

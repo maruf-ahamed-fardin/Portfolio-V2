@@ -693,8 +693,8 @@ html[data-motion='off'] .sweep::after {
     height: 100%;
   }
   .signal-about {
-    height: clamp(320px, 31vw, 460px);
-    margin: 8px -18px;
+    height: clamp(260px, 23vw, 340px);
+    margin: 0 -18px;
     background: radial-gradient(#ae722619, #0000 67%);
   }
   .signal-impact {
@@ -752,7 +752,7 @@ html[data-motion='off'] .sweep::after {
   }
   @media (max-width: 1000px) {
     .signal-about {
-      height: 380px;
+      height: 320px;
     }
   }
   @media (max-width: 700px) {
