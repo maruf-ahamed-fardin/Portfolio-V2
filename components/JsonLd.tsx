@@ -1,4 +1,4 @@
-import { featured, moreWork, projects, seo, site } from '@/lib/data';
+import { featured, moreWork, projects, seo, site, socials } from '@/lib/data';
 
 /** Schema.org graph: Person + ProfilePage + WebSite + the projects he built. Read by Google and AI answer engines. */
 export default function JsonLd() {
@@ -36,7 +36,7 @@ export default function JsonLd() {
         nationality: { '@type': 'Country', name: 'Bangladesh' },
         knowsAbout: [...seo.skills],
         knowsLanguage: ['English', 'Bengali'],
-        sameAs: [site.github, site.linkedin],
+        sameAs: socials.map((s) => s.href),
       },
       {
         '@type': 'ProfilePage',

@@ -43,9 +43,25 @@ export const site = {
   location: 'Mirpur, Dhaka, Bangladesh',
   github: 'https://github.com/maruf-ahamed-fardin',
   linkedin: 'https://www.linkedin.com/in/maruf-ahamed-fardin-36a941215',
+  // leave empty to hide the link everywhere
+  facebook: '',
+  instagram: '',
   cv: '/Maruf_Ahamed_Fardin_CV.pdf',
   url: 'https://maruf-ahamed-fardin.vercel.app',
 } as const;
+
+export type SocialKey = 'linkedin' | 'github' | 'facebook' | 'instagram';
+export type Social = { key: SocialKey; label: string; handle: string; note: string; href: string };
+
+/** Social profiles shown in the contact panel, footer and JSON-LD. Entries without a URL are skipped. */
+export const socials: Social[] = (
+  [
+    { key: 'linkedin', label: 'LinkedIn', handle: 'Maruf Ahamed Fardin', note: 'Career & shipping notes', href: site.linkedin },
+    { key: 'github', label: 'GitHub', handle: '@maruf-ahamed-fardin', note: 'Code in the open', href: site.github },
+    { key: 'facebook', label: 'Facebook', handle: 'Maruf Ahamed Fardin', note: 'Life between commits', href: site.facebook },
+    { key: 'instagram', label: 'Instagram', handle: '', note: 'Moments, off screen', href: site.instagram },
+  ] satisfies Social[]
+).filter((s) => s.href);
 
 /** Search / AI-answer facts. Kept factual and consistent everywhere (metadata, JSON-LD, llms.txt). */
 export const seo = {
