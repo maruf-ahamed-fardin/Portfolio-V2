@@ -163,7 +163,7 @@ export default function MotionSystem() {
 
   return (
     <>
-      <div ref={bar} className="pointer-events-none fixed top-0 left-0 z-70 h-0.5 w-full origin-left scale-x-0 bg-ember" aria-hidden="true" />
+      <div ref={bar} className="pointer-events-none fixed top-0 left-0 z-70 h-0.5 w-full origin-left bg-ember" style={{ transform: 'scaleX(0)' }} aria-hidden="true" />
       <button
         onClick={toggle}
         aria-pressed={!!on}
