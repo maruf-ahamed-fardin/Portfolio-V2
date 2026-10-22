@@ -7,12 +7,12 @@ export default function About() {
       <div className="wrap">
         <SectionHead label="01 / The person behind the code" aside="A connected perspective" />
 
-        <div className="mt-10 grid gap-10 md:mt-[70px] md:grid-cols-[1.35fr_1fr] md:gap-[clamp(32px,5.4vw,78px)]">
+        <div className="mt-8 grid gap-10 md:mt-12 md:grid-cols-[1.35fr_1fr] md:gap-[clamp(32px,5.4vw,78px)]">
           <div className="order-last md:order-none">
             <PerspectivePanel />
           </div>
 
-          <div className="self-center md:pt-[clamp(40px,12.5vw,180px)]" data-reveal>
+          <div className="self-center md:pt-[clamp(24px,5vw,72px)]" data-reveal>
             <h2 className="interfere font-display text-4xl leading-[1.03] tracking-[-1.4px] md:text-[clamp(36px,3.8vw,64px)] md:tracking-[-2px]">
               Code is
               <br />

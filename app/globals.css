@@ -692,7 +692,7 @@ html[data-motion='off'] .sweep::after {
     height: 100%;
   }
   .signal-about {
-    height: clamp(420px, 44vw, 640px);
+    height: clamp(320px, 31vw, 460px);
     margin: 8px -18px;
     background: radial-gradient(#ae722619, #0000 67%);
   }
@@ -751,7 +751,7 @@ html[data-motion='off'] .sweep::after {
   }
   @media (max-width: 1000px) {
     .signal-about {
-      height: 460px;
+      height: 380px;
     }
   }
   @media (max-width: 700px) {
@@ -759,7 +759,7 @@ html[data-motion='off'] .sweep::after {
       height: 250px;
     }
     .signal-about {
-      height: 380px;
+      height: 320px;
       margin: 0;
     }
     .signal-about .signal-fallback {

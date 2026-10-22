@@ -67,7 +67,7 @@ export function TravelPanel() {
     <Tabs
       value={value}
       onValueChange={setValue}
-      className="mt-14 grid gap-10 border border-line-2 px-4 pt-5 pb-7 md:mt-20 md:grid-cols-[1fr_1.1fr] md:px-7 md:pt-7 md:pb-[34px]"
+      className="mt-10 grid gap-8 border border-line-2 px-4 pt-5 pb-7 md:mt-12 md:grid-cols-[1fr_1.1fr] md:px-7 md:pt-7 md:pb-[34px]"
     >
       <div className="col-span-full flex justify-between font-mono text-[8px] tracking-[1.2px] text-tan">
         <span>HOW THE WORK TRAVELS</span>
