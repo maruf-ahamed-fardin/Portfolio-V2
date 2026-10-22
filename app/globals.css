@@ -348,6 +348,35 @@ html[data-motion='off'] .sweep::after {
   display: none;
 }
 
+/* ---------- contact panel ---------- */
+@keyframes contact-beam {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(260%);
+  }
+}
+.contact-beam {
+  animation: contact-beam 5.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+html[data-motion='off'] .contact-beam {
+  left: 30%;
+}
+.c-row::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-ember), transparent);
+  transition: width 0.6s var(--ease-expo);
+}
+.c-row:hover::after {
+  width: 100%;
+}
+
 /* =====================================================================
    HERO — ported 1:1 from the reference layout (values measured there)
    ===================================================================== */
