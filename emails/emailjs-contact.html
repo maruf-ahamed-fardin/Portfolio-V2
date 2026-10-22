@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
+  <title>New message from your portfolio</title>
+  <!--
+    EmailJS contact template — matches the portfolio theme (#030303 / ember #ff8c59 / serif display).
+    Variables sent by components/client/ContactPanel.tsx: {{name}} {{email}} {{reply_to}} {{message}} {{title}} {{time}}
+    Paste into EmailJS → Email Templates → Content → "Edit Content" → Code editor.
+  -->
+  <style>
+    /* phones: Gmail app, Apple Mail and most mobile clients honour this block; inline styles stay the desktop default */
+    @media only screen and (max-width: 480px) {
+      .outer { padding: 18px 10px !important; }
+      .pad { padding-left: 20px !important; padding-right: 20px !important; }
+      .pad-top { padding-top: 26px !important; }
+      .pad-bottom { padding-bottom: 24px !important; }
+      .h1 { font-size: 30px !important; letter-spacing: -0.6px !important; }
+      .lead { font-size: 13px !important; }
+      .brand { font-size: 16px !important; }
+      .stack { display: block !important; width: 100% !important; box-sizing: border-box; }
+      .row-label { padding: 14px 0 4px 0 !important; }
+      .row-val { padding: 0 0 14px 0 !important; border-top: 0 !important; }
+      .msg { padding: 16px 16px !important; font-size: 14px !important; line-height: 1.7 !important; }
+      .btn { padding: 15px 18px !important; }
+      .foot { display: block !important; width: 100% !important; text-align: left !important; padding-top: 4px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#030303;" bgcolor="#030303">
+  <!-- preheader (inbox preview text) -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#030303;font-size:1px;line-height:1px;">
+    {{name}} sent you a message through your portfolio
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#030303" style="background-color:#030303;">
+    <tr>
+      <td class="outer" align="center" style="padding:32px 14px;">
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+
+          <!-- top line: brand + status -->
+          <tr>
+            <td style="padding:0 4px 16px 4px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="brand" style="font-family:Georgia,'Times New Roman',serif;font-size:19px;letter-spacing:-0.4px;color:#f1eee8;">
+                    Maruf Ahamed Fardin<span style="color:#ff8c59;">.</span>
+                  </td>
+                  <td align="right" style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:9px;letter-spacing:1.6px;color:#bda58d;text-transform:uppercase;">
+                    <span style="color:#ff8c59;">&#9679;</span>&nbsp; New message
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- card -->
+          <tr>
+            <td bgcolor="#0e0c0a" style="background-color:#0e0c0a;border:1px solid #2b2722;">
+
+              <!-- ember edge -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td height="2" style="height:2px;line-height:2px;font-size:0;background-color:#ff8c59;background-image:linear-gradient(90deg,#b8673b,#ff8c59 55%,#0e0c0a);">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- heading -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="pad pad-top" style="padding:36px 36px 8px 36px;">
+                    <div style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:9px;letter-spacing:1.6px;color:#e5cbb0;text-transform:uppercase;">
+                      07 / The next chapter
+                    </div>
+                    <h1 class="h1" style="margin:16px 0 0 0;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:38px;line-height:1.08;letter-spacing:-1px;color:#f1eee8;">
+                      Someone said<br />
+                      <em style="color:#f3dcc3;">hello.</em>
+                    </h1>
+                    <p class="lead" style="margin:14px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#aaa9a4;">
+                      A new message just came in through your portfolio contact form.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- from -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="pad" style="padding:24px 36px 0 36px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #2b2722;border-bottom:1px solid #2b2722;">
+                      <tr>
+                        <td class="stack row-label" width="90" valign="top" style="padding:16px 0;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:1.4px;color:#c2ae97;text-transform:uppercase;">
+                          01&nbsp;&nbsp;Name
+                        </td>
+                        <td class="stack row-val" style="padding:16px 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#f1eee8;font-weight:bold;">
+                          {{name}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="stack row-label" width="90" valign="top" style="padding:16px 0;border-top:1px solid #2b2722;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:1.4px;color:#c2ae97;text-transform:uppercase;">
+                          02&nbsp;&nbsp;Email
+                        </td>
+                        <td class="stack row-val" style="padding:16px 0;border-top:1px solid #2b2722;font-family:Arial,Helvetica,sans-serif;font-size:15px;word-break:break-all;">
+                          <a href="mailto:{{email}}" style="color:#ffb287;text-decoration:none;">{{email}}</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="stack row-label" width="90" valign="top" style="padding:16px 0;border-top:1px solid #2b2722;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:1.4px;color:#c2ae97;text-transform:uppercase;">
+                          03&nbsp;&nbsp;Sent
+                        </td>
+                        <td class="stack row-val" style="padding:16px 0;border-top:1px solid #2b2722;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;color:#b8b1a8;">
+                          {{time}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- message -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="pad" style="padding:28px 36px 0 36px;">
+                    <div style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:1.4px;color:#c2ae97;text-transform:uppercase;">
+                      Message
+                    </div>
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
+                      <tr>
+                        <td class="msg" bgcolor="#151210" style="background-color:#151210;border-left:2px solid #ff8c59;padding:20px 22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.75;color:#e6ddd2;white-space:pre-wrap;">{{message}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- reply button -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="pad pad-bottom" style="padding:30px 36px 36px 36px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td bgcolor="#e3d9c7" style="background-color:#e3d9c7;">
+                          <a href="mailto:{{email}}?subject=Re:%20your%20message" class="btn" style="display:block;padding:18px 22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#17120d;text-decoration:none;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#17120d;">Reply to {{name}}</td>
+                                <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#17120d;">&#8599;</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="margin:12px 0 0 0;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:9px;color:#9d9387;">
+                      Or just hit reply — it goes straight to {{name}}.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- footer -->
+          <tr>
+            <td style="padding:22px 4px 0 4px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="foot" style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:0.8px;color:#7f776d;text-transform:uppercase;">
+                    Sent from your portfolio contact form
+                  </td>
+                  <td class="foot" align="right" style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:8px;letter-spacing:0.8px;color:#7f776d;text-transform:uppercase;">
+                    Dhaka &#8599; The world
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
