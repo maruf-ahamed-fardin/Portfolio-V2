@@ -442,7 +442,8 @@ html[data-motion='off'] .sweep::after {
   }
   .hero-side-note {
     position: absolute;
-    top: 28%;
+    top: 50%;
+    transform: translateY(-50%);
     left: var(--gutter);
     display: flex;
     flex-direction: column;
@@ -599,7 +600,6 @@ html[data-motion='off'] .sweep::after {
     }
     .hero-side-note {
       gap: 65px;
-      top: 24%;
     }
   }
   @media (max-width: 700px) {

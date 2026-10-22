@@ -32,7 +32,7 @@ export default function Hero() {
 
         <nav
           aria-label="Social profiles"
-          className="absolute top-[28%] right-(--gutter) z-[2] hidden w-[170px] lg:block [@media(max-height:780px)]:top-[24%]"
+          className="absolute top-1/2 right-(--gutter) z-[2] hidden w-[170px] -translate-y-1/2 lg:block"
         >
           <span className="caption text-[8px] text-[#c2ae97]">Find me elsewhere</span>
           <ul className="mt-3 border-b border-line">
