@@ -31,7 +31,7 @@ function Browser({ item }: { item: Featured }) {
         <span className="truncate text-center">{item.domain}</span>
         <ArrowUpRight strokeWidth={1.5} className="size-2 justify-self-end opacity-60" />
       </div>
-      <div className="relative aspect-[16/9.15] overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden md:aspect-[16/8]">
         <Image
           src={item.image}
           alt={`${item.title} screenshot`}
@@ -60,9 +60,9 @@ function FeatText({ item, className }: { item: Featured; className?: string }) {
             {item.title}
           </a>
         </h3>
-        <p className="mt-4 max-w-[580px] text-[13px] leading-[1.75] text-[#b3ada4] md:mt-[22px] md:text-sm">{item.body}</p>
-        {item.meta && <p className="mt-[18px] font-mono text-[8px] tracking-[0.8px] text-[#8f8a84] uppercase">{item.meta}</p>}
-        <ULink href={item.href} className="mt-[30px]">
+        <p className="mt-3 max-w-[580px] text-[13px] leading-[1.7] text-[#b3ada4] md:mt-4 md:text-sm">{item.body}</p>
+        {item.meta && <p className="mt-3 font-mono text-[8px] tracking-[0.8px] text-[#8f8a84] uppercase">{item.meta}</p>}
+        <ULink href={item.href} className="mt-5">
           Explore the build
         </ULink>
       </div>
@@ -91,9 +91,9 @@ export default function Work() {
           <br />A few things I’ve helped bring to life.
         </SplitHead>
 
-        <div className="mt-8 border-t border-line md:mt-12">
+        <div className="mt-6 border-t border-line md:mt-10">
           {/* 01 — large feature */}
-          <div className="grid items-center gap-[30px] border-b border-line pt-7 pb-[46px] md:gap-10 md:pt-[74px] md:grid-cols-[1.2fr_1fr] md:gap-[clamp(30px,5.4vw,78px)] md:pb-[50px]">
+          <div className="grid items-center gap-[30px] border-b border-line pt-6 pb-8 md:pt-10 md:grid-cols-[1.15fr_1fr] md:gap-[clamp(30px,5vw,72px)] md:pb-10">
             <div className="">
               <Browser item={a} />
             </div>
@@ -103,10 +103,10 @@ export default function Work() {
           </div>
 
           {/* 02 + 03 — side by side */}
-          <div className="grid gap-[50px] border-b border-line pt-10 pb-[50px] md:gap-[70px] md:pt-[78px] md:grid-cols-2 md:gap-[clamp(24px,3.75vw,54px)] md:pb-[90px]">
+          <div className="grid gap-10 border-b border-line pt-8 pb-10 md:pt-10 md:grid-cols-2 md:gap-[clamp(24px,3.75vw,54px)] md:pb-12">
             <div className="md:pl-[7px]">
               <Browser item={b} />
-              <FeatText item={b} className="mt-7 md:mt-10 md:grid-cols-[47px_1fr]" />
+              <FeatText item={b} className="mt-5 md:mt-6 md:grid-cols-[47px_1fr]" />
             </div>
             <div className="">
               <a
@@ -115,7 +115,7 @@ export default function Work() {
                 rel="noreferrer"
                 className="group sweep-card relative block overflow-hidden border border-white/10 bg-[#0e0d0c]"
               >
-                <div className="relative aspect-[16/9.5] overflow-hidden after:absolute after:inset-0 after:bg-[linear-gradient(180deg,transparent_55%,rgba(5,5,5,0.85))]">
+                <div className="relative aspect-[16/9] overflow-hidden md:aspect-[16/8] after:absolute after:inset-0 after:bg-[linear-gradient(180deg,transparent_55%,rgba(5,5,5,0.85))]">
                   <Image
                     src={c.image}
                     alt={`${c.title} screenshot`}
@@ -133,21 +133,21 @@ export default function Work() {
                 </div>
                 <RoundArrow />
               </a>
-              <FeatText item={c} className="mt-7 md:mt-10 md:grid-cols-[47px_1fr]" />
+              <FeatText item={c} className="mt-5 md:mt-6 md:grid-cols-[47px_1fr]" />
             </div>
           </div>
 
           {/* more ways I build */}
-          <div className="pt-[34px]">
+          <div className="pt-7">
             <p className="caption text-[10px] text-[#ac9a86]">More ways I build</p>
-            <div className="mt-10 md:mt-[50px]">
+            <div className="mt-6 md:mt-8">
               {moreWork.map((w) => (
                 <a
                   key={w.no}
                   href={w.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group mb-5 flex items-start justify-between border-b border-line pb-5 md:mb-[30px] md:pb-[30px]"
+                  className="group mb-4 flex items-start justify-between border-b border-line pb-4 md:mb-5 md:pb-5"
                 >
                   <div>
                     <small className="block font-mono text-[9px] leading-[1.6] text-[#b6a998] uppercase">
@@ -168,7 +168,7 @@ export default function Work() {
               ))}
             </div>
 
-            <details className="group/d -mt-5 border-b border-line md:-mt-[30px]">
+            <details className="group/d -mt-4 border-b border-line md:-mt-5">
               <summary className="flex cursor-pointer list-none justify-between py-[22px] text-[13px] text-[#b9afa3] [&::-webkit-details-marker]:hidden">
                 Inside the Alora project
                 <b className="font-normal transition-transform duration-400 ease-expo group-open/d:rotate-45">+</b>
@@ -188,14 +188,14 @@ export default function Work() {
               href={`${site.github}?tab=repositories`}
               target="_blank"
               rel="noreferrer"
-              className="group mt-9 inline-flex items-center gap-5 text-[13px]"
+              className="group mt-6 inline-flex items-center gap-5 text-[13px]"
             >
               Explore all work
               <ArrowRight strokeWidth={1.5} className="size-3.5 transition-transform duration-400 ease-expo group-hover:translate-x-1.5" />
             </a>
           </div>
 
-          <div className="mt-[60px] flex flex-wrap gap-x-[30px] gap-y-3.5 md:mt-[130px]">
+          <div className="mt-10 flex flex-wrap gap-x-[30px] gap-y-3.5 md:mt-14">
             {[
               { label: 'GitHub ↗', href: site.github },
               { label: 'Projects in the wild ↗', href: '#projects' },
