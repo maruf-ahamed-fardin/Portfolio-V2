@@ -12,13 +12,13 @@ export default function Stage() {
         <SectionHead label="06 / From ideas to people" aside="From the editor to the user" />
 
         <StageReveal className="stage-banner relative -mx-[var(--gutter)] mt-10 h-[560px] overflow-hidden bg-[#070707] after:pointer-events-none after:absolute after:inset-0 after:bg-[linear-gradient(180deg,rgba(3,3,3,0.75)_0%,rgba(3,3,3,0.25)_55%,rgba(3,3,3,0.7)_100%)] md:mx-0 md:mt-[74px] md:h-[520px] md:after:bg-[linear-gradient(90deg,rgba(3,3,3,0.82)_0%,rgba(3,3,3,0.45)_45%,rgba(3,3,3,0.1)_100%)] lg:h-[570px]">
-          <div data-stage-media className="stage-media absolute -top-[32%] -bottom-[32%] right-0 w-full scale-[1.08] will-change-transform md:w-[62%]">
+          <div data-stage-media className="stage-media absolute -top-[12%] -bottom-[12%] right-0 w-full will-change-transform md:w-[62%]">
             <Image
               src="/images/maruf.jpg"
               alt="Portrait of Maruf Ahamed Fardin"
               fill
               sizes="(max-width: 700px) 100vw, 62vw"
-              className="object-cover object-[50%_28%] brightness-[0.62] contrast-[1.05] grayscale"
+              className="object-cover object-[50%_20%] brightness-[0.62] contrast-[1.05] grayscale"
             />
             {/* colour layer revealed only inside the cursor spotlight */}
             <Image
@@ -27,7 +27,7 @@ export default function Stage() {
               aria-hidden="true"
               fill
               sizes="(max-width: 700px) 100vw, 62vw"
-              className="stage-spot object-cover object-[50%_28%] brightness-[0.95] saturate-[0.85]"
+              className="stage-spot object-cover object-[50%_20%] brightness-[0.95] saturate-[0.85]"
             />
           </div>
           <div className="relative z-[1] px-6 py-16 md:px-[78px] md:py-[92px]">

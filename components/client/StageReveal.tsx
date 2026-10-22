@@ -22,15 +22,12 @@ export default function StageReveal({ children, className }: { children: React.R
       if (cancelled) return;
       gsap.registerPlugin(ScrollTrigger);
       ctx = gsap.context(() => {
-        // scroll parallax: the oversized layer drifts through the frame and eases out of its zoom
+        // scroll parallax: the slightly oversized layer drifts through the frame (no extra zoom)
         gsap.fromTo(
           media,
-          { yPercent: -20 },
-          { yPercent: 20, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1.2 } }
+          { yPercent: -8 },
+          { yPercent: 8, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1.2 } }
         );
-        const img = media?.querySelectorAll('img');
-        if (img?.length)
-          gsap.fromTo(img, { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1.2 } });
       }, el);
     })();
 
