@@ -129,16 +129,22 @@ export default function Nav() {
         className={cn(
           'absolute inset-x-0 top-[calc(100%+10px)] flex max-h-[calc(100svh-108px)] flex-col overflow-y-auto rounded-[20px] border border-[#e7e1d5]/17 px-[22px] pt-3.5 pb-[22px] shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_12px_32px_rgba(0,0,0,0.33)] backdrop-blur-[20px] min-[901px]:hidden',
           'bg-[#0b0a09]/[0.98] bg-[image:linear-gradient(145deg,rgba(231,223,211,0.06),transparent_65%)]',
-          'origin-top transition-[opacity,transform,visibility] duration-400 ease-expo',
-          open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'
+          'origin-top transition-[opacity,transform,clip-path,visibility] duration-500 ease-expo',
+          open
+            ? 'visible translate-y-0 scale-100 opacity-100 [clip-path:inset(0_0_0_0_round_20px)]'
+            : 'invisible -translate-y-3 scale-[0.97] opacity-0 [clip-path:inset(0_0_100%_0_round_20px)] duration-300'
         )}
       >
-        {nav.map((n) => (
+        {nav.map((n, i) => (
           <a
             key={n.href}
             href={n.href}
             tabIndex={open ? 0 : -1}
-            className="group flex items-center justify-between border-b border-[#8e7963]/20 py-5 font-display text-[30px] leading-none transition-colors hover:text-[#f6dcc6]"
+            style={{ transitionDelay: open ? `${120 + i * 55}ms` : '0ms' }}
+            className={cn(
+              'group flex items-center justify-between border-b border-[#8e7963]/20 py-5 font-display text-[30px] leading-none transition-[opacity,transform,color] duration-500 ease-expo hover:text-[#f6dcc6]',
+              open ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
+            )}
           >
             <SignalText>{n.label}</SignalText>
             <span className="font-sans text-[17px] text-[#b69b78] transition-transform duration-400 ease-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">
@@ -146,7 +152,15 @@ export default function Nav() {
             </span>
           </a>
         ))}
-        <Button asChild variant="glass" className="mt-[22px] h-12 w-full justify-between px-3.5 text-xs">
+        <Button
+          asChild
+          variant="glass"
+          style={{ transitionDelay: open ? `${120 + nav.length * 55}ms` : '0ms' }}
+          className={cn(
+            'mt-[22px] h-12 w-full justify-between px-3.5 text-xs transition-[opacity,transform] duration-500 ease-expo',
+            open ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
+          )}
+        >
           <a href="#contact" tabIndex={open ? 0 : -1}>
             Let’s talk <ArrowUpRight strokeWidth={1.5} className="size-3" />
           </a>
