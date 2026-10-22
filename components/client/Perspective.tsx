@@ -32,7 +32,7 @@ function PerspectiveTabs() {
 function PerspectiveBodies() {
   return perspectives.map((p) => (
     <TabsContent key={p.key} value={p.key} className="mt-[25px]">
-      <h3 className="font-display text-[27px] leading-[1.1] tracking-[-0.64px] md:text-[32px]">{p.title}</h3>
+      <p className="font-display text-[27px] leading-[1.1] tracking-[-0.64px] md:text-[32px]">{p.title}</p>
       <p className="mt-[13px] max-w-[520px] text-[13px] leading-[1.75] text-[#bdb0a0]">{p.body}</p>
       <ULink href={p.link.href} small icon={false} className="mt-4">
         {p.link.label} ↗

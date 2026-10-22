@@ -43,7 +43,6 @@ export default function ProjectGrid() {
               href={p.live}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Open ${p.chip} live`}
               className="relative block aspect-video overflow-hidden border border-white/8 bg-[#111] after:absolute after:inset-0 after:bg-[linear-gradient(180deg,transparent_60%,rgba(0,0,0,0.55))]"
             >
               <Image

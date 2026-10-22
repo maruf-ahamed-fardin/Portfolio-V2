@@ -82,7 +82,7 @@ export default function Nav() {
         hidden && !open && '-translate-y-[120px]'
       )}
     >
-      <a href="#top" className="mr-auto font-display text-2xl leading-[0.95] tracking-[-0.6px] md:text-[26px]" aria-label="Back to top">
+      <a href="#top" className="mr-auto font-display text-2xl leading-[0.95] tracking-[-0.6px] md:text-[26px]">
         Maruf Ahamed Fardin
       </a>
 

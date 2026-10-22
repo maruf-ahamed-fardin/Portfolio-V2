@@ -57,7 +57,7 @@ export default function Hero() {
                 <SignalText>Start a conversation</SignalText>
               </ULink>
               <Button asChild variant="pill" size="pill" className="group sweep sweep-bright max-md:h-11 max-md:px-[17px] max-md:text-[11px]">
-                <a href={site.cv} download aria-label="Download my CV (PDF)">
+                <a href={site.cv} download>
                   <SignalText>Download CV</SignalText>
                   <Download strokeWidth={1.5} className="size-[13px] transition-transform duration-300 group-hover:translate-y-[3px]" />
                 </a>

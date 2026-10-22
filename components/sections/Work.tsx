@@ -20,7 +20,6 @@ function Browser({ item }: { item: Featured }) {
       href={item.href}
       target="_blank"
       rel="noreferrer"
-      aria-label={`Open ${item.title}`}
       className="group sweep-card relative block overflow-hidden border border-white/12 bg-[#121110] transition-colors duration-300 hover:border-[#999]"
     >
       <div className="grid h-[34px] grid-cols-[60px_1fr_60px] items-center border-b border-white/8 px-3 font-mono text-[8px] text-[#bdb2a8] md:h-11 md:px-6 md:text-[9px]">
@@ -113,7 +112,6 @@ export default function Work() {
                 href={c.href}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={`Open ${c.title}`}
                 className="group sweep-card relative block overflow-hidden border border-white/10 bg-[#0e0d0c]"
               >
                 <div className="relative aspect-[16/9.5] overflow-hidden after:absolute after:inset-0 after:bg-[linear-gradient(180deg,transparent_55%,rgba(5,5,5,0.85))]">
