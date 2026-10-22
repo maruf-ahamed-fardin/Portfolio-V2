@@ -61,29 +61,21 @@ function compile(gl: WebGLRenderingContext, type: number, src: string) {
 export default function HeroCanvas({ src, alt }: { src: string; alt: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
-  // live effects follow the viewport (off on phones, like the reference) unless the visitor toggles them
+  // live effects run on every screen; the motion toggle or reduced motion turns them off
   const [auto, setAuto] = useState(false);
-  const [override, setOverride] = useState<boolean | null>(null);
   const [motion, setMotion] = useState(true);
   const [failed, setFailed] = useState(false);
-  const wantLive = override ?? auto;
-  const live = wantLive && motion && !failed;
+  const live = auto && motion && !failed;
 
   useEffect(() => {
-    const wide = matchMedia('(min-width: 701px)');
     const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-    const sync = () => {
-      setAuto(wide.matches && !reduce.matches);
-      setOverride(null);
-    };
+    const sync = () => setAuto(!reduce.matches);
     sync();
-    wide.addEventListener('change', sync);
     reduce.addEventListener('change', sync);
     setMotion(document.documentElement.dataset.motion !== 'off');
     const onMotion = (e: Event) => setMotion((e as CustomEvent<boolean>).detail);
     addEventListener('motionchange', onMotion);
     return () => {
-      wide.removeEventListener('change', sync);
       reduce.removeEventListener('change', sync);
       removeEventListener('motionchange', onMotion);
     };
@@ -237,19 +229,11 @@ export default function HeroCanvas({ src, alt }: { src: string; alt: string }) {
   }, [live, src]);
 
   return (
-    <>
-      <div className="scene-backdrop" aria-hidden="true">
-        <div ref={boxRef} className="signal-portrait">
-          <Image src={src} alt={alt} width={1000} height={1250} priority sizes="(max-width: 700px) 110vw, 720px" />
-        </div>
-        {live && <canvas ref={canvasRef} className="signal-canvas" />}
+    <div className="scene-backdrop" aria-hidden="true">
+      <div ref={boxRef} className="signal-portrait">
+        <Image src={src} alt={alt} width={1000} height={1250} priority sizes="(max-width: 700px) 110vw, 720px" />
       </div>
-      <button
-        onClick={() => setOverride(!wantLive)}
-        className="fixed bottom-5 left-3 z-55 h-10 rounded-[4px] border border-white/15 bg-[#141312]/90 px-[11px] font-mono text-[8px] text-[#e3dcd2] backdrop-blur-md md:hidden"
-      >
-        {wantLive ? 'Disable live effects' : 'Enable live effects'}
-      </button>
-    </>
+      {live && <canvas ref={canvasRef} className="signal-canvas" />}
+    </div>
   );
 }

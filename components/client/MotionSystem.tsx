@@ -168,14 +168,14 @@ export default function MotionSystem() {
         onClick={toggle}
         aria-pressed={!!on}
         aria-label={on ? 'Motion on — disable animations' : 'Motion off — enable animations'}
-        className="fixed right-3 bottom-5 z-55 inline-flex h-10 items-center gap-[9px] rounded-[4px] border border-white/15 bg-[#141312]/90 px-3.5 font-mono text-[8px] tracking-[1px] text-[#d2c6ba] backdrop-blur-md transition-colors hover:border-ember/60 md:right-[22px] md:h-9"
+        className="fixed right-3 bottom-4 z-55 inline-flex items-center gap-[9px] border border-white/15 bg-[#141312]/90 font-mono text-[8px] tracking-[1px] text-[#d2c6ba] backdrop-blur-md transition-colors hover:border-ember/60 max-md:size-9 max-md:justify-center max-md:rounded-full md:right-[22px] md:bottom-5 md:h-9 md:rounded-[4px] md:px-3.5"
       >
         <i className="inline-flex h-2 items-end gap-0.5" aria-hidden="true">
           {[0, 0.2, 0.4].map((d) => (
             <b key={d} className="h-full w-px animate-eq bg-current" style={{ animationDelay: `${d}s` }} />
           ))}
         </i>
-        MOTION {on === false ? 'OFF' : 'ON'}
+        <span className="max-md:hidden">MOTION {on === false ? 'OFF' : 'ON'}</span>
       </button>
     </>
   );
