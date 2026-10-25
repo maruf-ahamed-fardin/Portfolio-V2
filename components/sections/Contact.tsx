@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden pt-[70px] before:pointer-events-none before:absolute before:top-[30%] before:-right-[10%] before:size-[70vw] before:rounded-full before:bg-[radial-gradient(circle,rgba(70,50,30,0.22),transparent_62%)] md:pt-[110px]"
+      className="relative overflow-hidden pt-[70px] md:pt-[110px]"
     >
       <div className="wrap relative">
         <SectionHead label="07 / The next chapter" aside="Let’s make it matter" />

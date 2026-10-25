@@ -11,8 +11,8 @@ const rows = [
 ];
 
 const field =
-  'contact-field w-full rounded-none border border-line-2 bg-white/[0.015] px-[18px] text-[15px] text-ink placeholder:text-[#8f877d] outline-none transition-[border-color,background,box-shadow] duration-300 hover:border-[#6d5c49] focus:border-ember/70 focus:bg-white/[0.03] focus:shadow-[0_0_0_4px_rgba(255,140,89,0.07)]';
-const label = 'font-mono text-[8px] tracking-[1.4px] text-[#c2ae97] uppercase';
+  'contact-field w-full rounded-none border border-line-2 bg-white/[0.015] px-[18px] text-[15px] text-ink placeholder:text-[#7a7a7a] outline-none transition-[border-color,background] duration-300 hover:border-white/35 focus:border-white/60 focus:bg-white/[0.03]';
+const label = 'font-mono text-[8px] tracking-[1.4px] text-mute uppercase';
 
 // EmailJS keys come from .env.local; without them the form falls back to the visitor's mail app
 const emailjsKeys = {
@@ -80,12 +80,9 @@ export default function ContactPanel() {
       {/* intro */}
       <div>
         <p
-          className="mt-8 inline-flex items-center gap-3 border border-ember/45 bg-[linear-gradient(90deg,rgba(255,140,89,0.1),rgba(255,140,89,0.02))] px-4 py-2.5 font-mono text-[9px] tracking-[1.6px] text-[#f0e4d6] md:mt-9"
+          className="mt-8 inline-flex items-center gap-3 border border-line-2 px-4 py-2.5 font-mono text-[9px] tracking-[1.6px] text-[#c9c9c9] md:mt-9"
         >
-          <span className="relative flex size-[7px]">
-            <span className="absolute inset-0 animate-ping rounded-full bg-ember/70" />
-            <span className="relative size-[7px] rounded-full bg-ember" />
-          </span>
+          <span className="size-[6px] rounded-full bg-ember" />
           OPEN TO MEANINGFUL OPPORTUNITIES
         </p>
 
@@ -93,16 +90,10 @@ export default function ContactPanel() {
           Something great
           <br />
           starts with{' '}
-          <em className="relative inline-block pr-[0.05em] text-[#f3dcc3]">
-            a hello.
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-[0.1em] left-0 h-px w-full bg-[linear-gradient(90deg,var(--color-ember),rgba(255,140,89,0.4)_60%,transparent)]"
-            />
-          </em>
+          <em className="pr-[0.05em]">a hello.</em>
         </h2>
 
-        <p className="mt-4 max-w-[520px] text-sm leading-[1.8] text-[#bfb4a6]">
+        <p className="mt-4 max-w-[520px] text-sm leading-[1.8] text-mute">
           Full-time roles, freelance builds, AI products. If our worlds overlap, I’d love to hear from you.
         </p>
 
@@ -110,9 +101,9 @@ export default function ContactPanel() {
           {rows.map((r, i) => {
             const inner = (
               <>
-                <span className="font-mono text-[8px] text-[#7f776d]">0{i + 1}</span>
-                <r.Icon strokeWidth={1.4} className="size-4 text-[#d8c2a6] transition-colors duration-300 group-hover:text-ember" />
-                <span className="hidden font-mono text-[8px] tracking-[1.4px] text-[#c2ae97] uppercase sm:block">{r.label}</span>
+                <span className="font-mono text-[8px] text-[#7a7a7a]">0{i + 1}</span>
+                <r.Icon strokeWidth={1.4} className="size-4 text-[#c9c9c9] transition-colors duration-300 group-hover:text-ember" />
+                <span className="hidden font-mono text-[8px] tracking-[1.4px] text-mute uppercase sm:block">{r.label}</span>
                 <span className="min-w-0 text-sm [overflow-wrap:anywhere] text-ink transition-transform duration-500 ease-expo group-hover:translate-x-1.5 sm:truncate sm:text-[15px] md:text-base">
                   {r.value}
                 </span>
@@ -133,7 +124,7 @@ export default function ContactPanel() {
                 {r.href ? (
                   <a
                     href={r.href}
-                    className={`${cls} transition-[background] duration-500 hover:bg-[linear-gradient(100deg,rgba(255,140,89,0.07),transparent_70%)]`}
+                    className={`${cls} transition-[background] duration-500 hover:bg-white/[0.02]`}
                   >
                     {inner}
                   </a>
@@ -149,26 +140,23 @@ export default function ContactPanel() {
       {/* message card */}
       <form
         onSubmit={onSubmit}
-        className="relative isolate border border-line-2 bg-[linear-gradient(160deg,#151210,#0b0a09_55%,#0e0c0a)] p-6 md:px-8 md:py-7"
+        className="relative isolate border border-line-2 bg-[#0a0a0a] p-6 md:px-8 md:py-7"
       >
         {/* corner brackets */}
         {['-top-px -left-px border-t border-l', '-top-px -right-px border-t border-r', '-bottom-px -left-px border-b border-l', '-bottom-px -right-px border-b border-r'].map(
           (pos) => (
-            <span key={pos} aria-hidden="true" className={`pointer-events-none absolute size-4 border-ember ${pos}`} />
+            <span key={pos} aria-hidden="true" className={`pointer-events-none absolute size-4 border-white/45 ${pos}`} />
           )
         )}
         {/* travelling light along the top edge */}
         <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-px h-px overflow-hidden">
-          <span className="contact-beam absolute inset-y-0 w-2/5 bg-[linear-gradient(90deg,transparent,var(--color-ember),#f6dcc6,transparent)]" />
+          <span className="contact-beam absolute inset-y-0 w-2/5 bg-[linear-gradient(90deg,transparent,rgba(241,238,232,0.55),transparent)]" />
         </span>
 
         <div className="flex items-center justify-between gap-4 border-b border-line pb-4 font-mono text-[8px] tracking-[1.6px] uppercase">
-          <span className="text-[#efe4d6]">New message</span>
-          <span className="flex items-center gap-2 text-[#c2ae97]">
-            <span className="relative flex size-[6px]">
-              <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400/60" />
-              <span className="relative size-[6px] rounded-full bg-emerald-400" />
-            </span>
+          <span className="text-ink">New message</span>
+          <span className="flex items-center gap-2 text-mute">
+            <span className="size-[6px] rounded-full bg-ember" />
             Usually replies in 24h
           </span>
         </div>
@@ -197,7 +185,7 @@ export default function ContactPanel() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="group sweep sweep-bright mt-6 flex h-[54px] w-full disabled:cursor-wait disabled:opacity-80 items-center justify-between bg-cream px-6 text-[15px] text-[#17120d] transition-[background,box-shadow] duration-300 hover:bg-[#f1e6d4] hover:shadow-[0_18px_50px_-18px_rgba(255,140,89,0.55)]"
+          className="group sweep sweep-bright mt-6 flex h-[54px] w-full disabled:cursor-wait disabled:opacity-80 items-center justify-between bg-cream px-6 text-[15px] text-[#17120d] transition-[background,box-shadow] duration-300 hover:bg-ink"
         >
           <span key={status} className="animate-swap" aria-live="polite">
             {statusText[status]}
@@ -207,7 +195,7 @@ export default function ContactPanel() {
             className="size-4 transition-transform duration-500 ease-expo group-hover:translate-x-1 group-hover:-translate-y-1"
           />
         </button>
-        <p className="mt-3 font-mono text-[8px] tracking-[0.4px] text-[#9d9387]">Sends straight to my inbox. I usually reply within a day.</p>
+        <p className="mt-3 font-mono text-[8px] tracking-[0.4px] text-[#7a7a7a]">Sends straight to my inbox. I usually reply within a day.</p>
       </form>
     </div>
   );
