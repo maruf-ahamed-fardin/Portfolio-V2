@@ -1,5 +1,6 @@
 import { PerspectivePanel } from '@/components/client/Perspective';
 import { SectionHead, ULink } from '@/components/primitives';
+import { seo } from '@/lib/data';
 
 export default function About() {
   return (
@@ -28,6 +29,15 @@ export default function About() {
                 the interface, the database, and the AI behind it.
               </strong>
             </p>
+            <div className="mt-6 max-w-[470px] border-y border-line py-3.5">
+              <span className="font-mono text-[8px] tracking-[1.4px] text-mute uppercase">Education</span>
+              <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span className="text-[15px] text-ink">{seo.education.degree}</span>
+                <span className="font-mono text-[9px] tracking-[0.6px] text-[#a6a6a6]">
+                  {seo.education.start}–Present · {seo.education.name}
+                </span>
+              </div>
+            </div>
             <ULink href="#journey" className="mt-5">
               Read my story
             </ULink>
