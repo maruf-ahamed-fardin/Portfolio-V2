@@ -236,6 +236,16 @@ export const journey: Milestone[] = [
 
 export const projects: Project[] = [
   {
+    title: 'Money, made clear.',
+    tag: 'fullstack',
+    chip: 'BudgetBD',
+    meta: 'BudgetBD / Server Actions · SQLite',
+    body: 'Student budget planner with charts & goals',
+    image: '/images/work/budget.jpg',
+    live: 'https://student-budget-planner-gamma.vercel.app',
+    code: 'https://github.com/maruf-ahamed-fardin/student-budget-planner',
+  },
+  {
     title: 'Team Profile.',
     tag: 'fullstack',
     chip: 'SeloraX',
@@ -274,16 +284,6 @@ export const projects: Project[] = [
     image: '/images/work/talksy.jpg',
     live: 'https://talksy-pied.vercel.app',
     code: 'https://github.com/maruf-ahamed-fardin/talksy',
-  },
-  {
-    title: 'Money, made clear.',
-    tag: 'fullstack',
-    chip: 'BudgetBD',
-    meta: 'BudgetBD / Server Actions · SQLite',
-    body: 'Student budget planner with charts & goals',
-    image: '/images/work/budget.jpg',
-    live: 'https://student-budget-planner-gamma.vercel.app',
-    code: 'https://github.com/maruf-ahamed-fardin/student-budget-planner',
   },
   {
     title: 'Anime, explored.',
