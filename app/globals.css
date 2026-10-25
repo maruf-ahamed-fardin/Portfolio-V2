@@ -694,7 +694,7 @@ html[data-motion='off'] .contact-beam {
     }
     /* right padding keeps the row clear of the fixed motion button */
     .hero-bottom {
-      padding-top: 24px;
+      padding-top: 12px;
       padding-right: 40px;
     }
     .hero-bottom > a:first-child {
