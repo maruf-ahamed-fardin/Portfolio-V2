@@ -678,8 +678,8 @@ html[data-motion='off'] .contact-beam {
       margin-left: 0;
     }
     .hero-description {
-      gap: 14px;
-      margin-top: 12px;
+      gap: 10px;
+      margin-top: 10px;
     }
     .hero-description p {
       max-width: 320px;
@@ -688,7 +688,8 @@ html[data-motion='off'] .contact-beam {
     .hero-actions {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 14px 10px;
+      gap: 10px;
+      margin-top: 2px;
     }
     /* bottom padding keeps the row above the fixed motion button */
     .hero-bottom {
