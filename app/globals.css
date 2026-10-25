@@ -633,7 +633,7 @@ html[data-motion='off'] .contact-beam {
   }
   @media (max-width: 700px) {
     .scene-backdrop {
-      min-height: 800px;
+      min-height: 640px;
     }
     .signal-portrait {
       top: 95px;
@@ -644,11 +644,12 @@ html[data-motion='off'] .contact-beam {
     .signal-portrait img {
       opacity: 0.9;
     }
+    /* low min-height so the hero (and its bottom row) fits short phone screens */
     .hero {
-      min-height: 800px;
+      min-height: 640px;
       max-height: 1000px;
-      padding-top: 105px;
-      padding-bottom: 26px;
+      padding-top: 88px;
+      padding-bottom: 22px;
     }
     .hero-grid {
       inset: 80px var(--gutter) 0;
@@ -693,7 +694,7 @@ html[data-motion='off'] .contact-beam {
     }
     /* right padding keeps the row clear of the fixed motion button */
     .hero-bottom {
-      padding-top: 36px;
+      padding-top: 24px;
       padding-right: 40px;
     }
     .hero-bottom > a:first-child {
