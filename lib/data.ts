@@ -230,7 +230,7 @@ export const journey: Milestone[] = [
   {
     date: 'Jul 2026',
     lead: 'Junior Full Stack Developer.',
-    body: 'Designing and building e-commerce website frontends and the SeloraX dashboard, and shipping the XCall chat interface, SeloraX EMS and Team Profile end-to-end—from UI to database.',
+    body: 'Designing and building e-commerce website frontends and the SeloraX dashboard, and shipping the XCall chat interface and SeloraX EMS end-to-end—from UI to database. Delivered 300+ landing pages and 20+ e-commerce websites for businesses.',
   },
 ];
 
