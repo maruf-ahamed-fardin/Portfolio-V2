@@ -691,10 +691,10 @@ html[data-motion='off'] .contact-beam {
       gap: 10px;
       margin-top: 2px;
     }
-    /* bottom padding keeps the row above the fixed motion button */
+    /* right padding keeps the row clear of the fixed motion button */
     .hero-bottom {
       padding-top: 36px;
-      padding-bottom: 64px;
+      padding-right: 40px;
     }
     .hero-bottom > a:first-child {
       gap: 9px;
